@@ -7,7 +7,6 @@ android {
     compileSdk 36
 
     defaultConfig {
-        applicationId "ru.whbex.nggl4eswrapper"
         minSdk 24
         targetSdk 36
         versionCode 1
@@ -23,6 +22,12 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "src/main/gl4es/CMakeLists.txt"
+        }
     }
 }
 
